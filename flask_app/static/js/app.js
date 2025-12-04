@@ -50,6 +50,20 @@ prevBtn.addEventListener("click", () => {
   resetAutoSlide();
 });
 
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight") {
+    index = (index + 1) % total;
+    showSlide(index);
+    resetAutoSlide();
+  }
+
+  if (e.key === "ArrowLeft") {
+    index = (index - 1 + total) % total;
+    showSlide(index);
+    resetAutoSlide();
+  }
+});
+
 // ===============================
 // LANCEMENT
 // ===============================
