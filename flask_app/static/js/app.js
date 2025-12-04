@@ -1,17 +1,56 @@
 const slides = document.querySelectorAll(".slide");
 const total = slides.length;
-let index = 0;
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
 
-// On active la première image au départ
+let index = 0;
+let autoSlideInterval;
+
+// Activation de la première image
 slides[index].classList.add("active");
 
 // ===============================
-// FONDU AUTOMATIQUE
+// FONCTION D’AFFICHAGE
 // ===============================
-setInterval(() => {
-  slides[index].classList.remove("active");
+function showSlide(i) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[i].classList.add("active");
+}
 
+// ===============================
+// DÉFILEMENT AUTOMATIQUE
+// ===============================
+function startAutoSlide() {
+  autoSlideInterval = setInterval(() => {
+    index = (index + 1) % total;
+    showSlide(index);
+  }, 5000);
+}
+
+function resetAutoSlide() {
+  clearInterval(autoSlideInterval);
+  startAutoSlide();
+}
+
+// ===============================
+// FLÈCHE DROITE
+// ===============================
+nextBtn.addEventListener("click", () => {
   index = (index + 1) % total;
+  showSlide(index);
+  resetAutoSlide();
+});
 
-  slides[index].classList.add("active");
-}, 5000); // ✅ 5 secondes (modifiable)
+// ===============================
+// FLÈCHE GAUCHE
+// ===============================
+prevBtn.addEventListener("click", () => {
+  index = (index - 1 + total) % total;
+  showSlide(index);
+  resetAutoSlide();
+});
+
+// ===============================
+// LANCEMENT
+// ===============================
+startAutoSlide();
