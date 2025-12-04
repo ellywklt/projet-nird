@@ -1,34 +1,17 @@
-const slider = document.getElementById("slider");
 const slides = document.querySelectorAll(".slide");
 const total = slides.length;
-
 let index = 0;
-let startX = 0;
 
-// Souris (desktop)
-window.addEventListener("mousedown", (e) => {
-  startX = e.clientX;
-});
+// On active la première image au départ
+slides[index].classList.add("active");
 
-window.addEventListener("mouseup", (e) => {
-  let delta = e.clientX - startX;
+// ===============================
+// FONDU AUTOMATIQUE
+// ===============================
+setInterval(() => {
+  slides[index].classList.remove("active");
 
-  if (delta < -80 && index < total - 1) index++;
-  if (delta > 80 && index > 0) index--;
+  index = (index + 1) % total;
 
-  slider.style.transform = `translateX(-${index * 100}vw)`;
-});
-
-// Tactile (mobile)
-window.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-});
-
-window.addEventListener("touchend", (e) => {
-  let delta = e.changedTouches[0].clientX - startX;
-
-  if (delta < -80 && index < total - 1) index++;
-  if (delta > 80 && index > 0) index--;
-
-  slider.style.transform = `translateX(-${index * 100}vw)`;
-});
+  slides[index].classList.add("active");
+}, 5000); // ✅ 5 secondes (modifiable)
