@@ -6,17 +6,17 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/annee1")
+@app.route("/MINI-JEU")
 def annee1():
-    return render_template("annee1.html")
+    return render_template("JEU.html")
 
-@app.route("/annee2")
+@app.route("/LINUX")
 def annee2():
-    return render_template("annee2.html")
+    return render_template("LINUX.html")
 
-@app.route("/annee3")
+@app.route("/PARTI-PRIS")
 def annee3():
-    return render_template("annee3.html")
+    return render_template("PartiPris.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
