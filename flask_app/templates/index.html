@@ -27,22 +27,25 @@
 <h1 class="title">NIRD</h1>
 
 <!-- ICÔNES EN IMAGES -->
-<div class="grid">
-  <a href="/MINI-JEU" class="card">
-    <img src="../static/images/sectionMiniGames.png" alt="Mini-JEU">
-    <span>MINI-JEU</span>
-  </a>
+<div class="grid-container">
+  <div class="grid1">
+    <a href="/MINI-JEU" class="card1">
+      <img src="../static/images/sectionMiniGames.png" alt="Mini-JEU">
+      <span>MINI-JEU</span>
+    </a>
+  </div>
 
+  <div class="grid">
+    <a href="/LINUX" class="card">
+      <img src="../static/images/sectionLinux.png" alt="LINUX">
+      <span>LINUX</span>
+    </a>
 
-  <a href="/LINUX" class="card">
-    <img src="../static/images/sectionLinux.png" alt="LINUX">
-    <span>LINUX</span>
-  </a>
-
-  <a href="/PARTI-PRIS" class="card">
-    <img src="../static/images/sectionPartiPris.png" alt="Parti-pris">
-    <span>PARTI-PRIS</span>
-  </a>
+    <a href="/PARTI-PRIS" class="card">
+      <img src="../static/images/sectionPartiPris.png" alt="Parti-pris">
+      <span>PARTI-PRIS</span>
+    </a>
+  </div>
 </div>
 
 <script src="{{ url_for('static', filename='js/app.js') }}"></script>
