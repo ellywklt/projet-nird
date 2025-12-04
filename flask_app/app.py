@@ -7,15 +7,15 @@ def home():
     return render_template("index.html")
 
 @app.route("/MINI-JEU")
-def annee1():
+def MiniJeu():
     return render_template("JEU.html")
 
 @app.route("/LINUX")
-def annee2():
+def Linux():
     return render_template("LINUX.html")
 
 @app.route("/PARTI-PRIS")
-def annee3():
+def PartiPri():
     return render_template("PartiPris.html")
 
 if __name__ == "__main__":
