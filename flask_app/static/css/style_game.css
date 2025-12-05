@@ -30,12 +30,12 @@ body {
 .memory-game {
     display: grid;
     grid-template-columns: repeat(4, 150px);
-    gap: 10px;
+    gap: 75px;
 }
 
 .memory-card {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.5s;
@@ -76,7 +76,7 @@ body {
 #final-image {
     position: fixed;
     top: 50%;
-    left: 58%;
+    left: 55%;
     transform: translate(-50%, -50%) scale(1);
     display: flex;
     justify-content: center;
@@ -85,7 +85,7 @@ body {
 }
 
 #final-image a img {
-    width: 300px;  /* taille initiale */
+    width: 200px;  /* taille initiale */
     border-radius: 10px;
     box-shadow: 0 0 20px #444;
     animation: zoomIn 2s forwards; /* applique le zoom */
