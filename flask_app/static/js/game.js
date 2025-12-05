@@ -70,12 +70,20 @@ function showFinalImage() {
 
     const container = document.getElementById("final-image");
     container.innerHTML = ""; // vide le conteneur
+    container.style.display = "block"; // assure l'affichage
+
+    // 🎉 Confettis au moment de l'affichage
+    confetti({
+        particleCount: 150,
+        spread: 80,
+        origin: { y: 0.6 }
+    });
 
     // Crée un lien vers une autre page
     const link = document.createElement("a");
     link.href = "/FRISE"; // mets ici l'URL de redirection
 
-    // Crée l'image
+    // Crée l'image finale
     const finalImage = document.createElement("img");
     finalImage.src = "/static/images/trophy.jpg"; // image de victoire
 

@@ -74,8 +74,10 @@ body {
 }
 
 #final-image {
+    width: auto;
+    height: auto;
     position: fixed;
-    top: 50%;
+    top: 70%;
     left: 55%;
     transform: translate(-50%, -50%) scale(1);
     display: flex;
