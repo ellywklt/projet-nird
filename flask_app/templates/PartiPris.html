@@ -1,17 +1,155 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <link rel="icon" href="{{ url_for('static', filename='../static/images/favicon.ico') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
   <meta charset="UTF-8">
-  <title>PARTI-PRIS</title>
+  <title>Projet NIRD – Parti-pris</title>
+
+  <!-- Polices -->
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <style>
+    body {
+      background: radial-gradient(circle at top, #111, #000);
+      font-family: 'Playfair Display', serif;
+      color: #fff;
+      padding: 80px 10%;
+    }
+
+    .parti-container {
+      max-width: 1000px;
+      margin: auto;
+      background: rgba(0,0,0,0.65);
+      border-radius: 24px;
+      padding: 60px;
+      box-shadow: 0 0 60px rgba(255, 200, 0, 0.25);
+    }
+
+    h1 {
+      font-family: 'Zalando Sans Expanded', sans-serif;
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 40px;
+      color: #ffcc00;
+      text-shadow: 0 0 15px rgba(255,204,0,0.6);
+    }
+
+    h2 {
+      font-family: 'Zalando Sans Expanded', sans-serif;
+      color: #ffb703;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      color: #e6e6e6;
+    }
+
+    ul {
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+
+    li {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 40px;
+      text-align: center;
+      color: #aaa;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .back-link:hover {
+      color: #ffcc00;
+    }
+  </style>
 </head>
-<body style="padding:40px">
+<body>
 
-<h1>PARTI-PRIS</h1>
-<p>Contenu pédagogique ici.</p>
+  <div class="parti-container">
 
-<a href="/">⬅ Home</a>
+    <h1>Parti-pris du projet NIRD</h1>
+
+    <p>
+      Le projet <span class="highlight">NIRD</span> repose sur des choix forts et engagés, à la fois 
+      <span class="highlight">écologiques</span>, <span class="highlight">économiques</span> et 
+      <span class="highlight">éthiques</span>.  
+      Ces partis-pris donnent tout son sens au reconditionnement informatique et à l’usage du logiciel libre.
+    </p>
+
+    <h2>🌱 Un engagement écologique fort</h2>
+    <p>
+      Le numérique est aujourd’hui l’un des secteurs les plus polluants. Le projet NIRD s’inscrit dans une logique
+      de <span class="highlight">réduction des déchets électroniques</span> et de limitation de l’empreinte carbone.
+    </p>
+
+    <ul>
+      <li>Moins d’ordinateurs jetés inutilement,</li>
+      <li>Réduction de l’extraction de matières premières,</li>
+      <li>Allongement de la durée de vie du matériel,</li>
+      <li>Sensibilisation des élèves aux enjeux environnementaux.</li>
+    </ul>
+
+    <h2>💰 Un choix économique responsable</h2>
+    <p>
+      Le reconditionnement permet également de proposer une <span class="highlight">alternative économique</span>
+      à l’achat de matériel neuf, souvent coûteux.
+    </p>
+
+    <ul>
+      <li>Diminution des dépenses pour les établissements,</li>
+      <li>Accès au numérique à moindre coût,</li>
+      <li>Réemploi du matériel existant,</li>
+      <li>Valorisation des ressources déjà disponibles.</li>
+    </ul>
+
+    <h2>🔐 Protection des données et souveraineté numérique</h2>
+    <p>
+      Le projet NIRD met l’accent sur la <span class="highlight">protection des données personnelles</span>
+      et la maîtrise des outils numériques.
+      Grâce à Linux et aux logiciels libres :
+    </p>
+
+    <ul>
+      <li>les données ne sont pas exploitées à des fins commerciales,</li>
+      <li>les systèmes sont plus transparents,</li>
+      <li>les utilisateurs gardent le contrôle de leurs informations,</li>
+      <li>les risques de dépendance aux grandes plateformes sont réduits.</li>
+    </ul>
+
+    <h2>🤝 Une démarche citoyenne et éducative</h2>
+    <p>
+      Le projet NIRD ne se limite pas à un simple reconditionnement technique.  
+      Il s’agit d’une <span class="highlight">démarche citoyenne</span> qui sensibilise les élèves :
+    </p>
+
+    <ul>
+      <li>à la consommation responsable,</li>
+      <li>au respect de l’environnement,</li>
+      <li>aux libertés numériques,</li>
+      <li>et à la solidarité.</li>
+    </ul>
+
+    <a href="/" class="back-link">← Retour à l’accueil</a>
+
+  </div>
 
 </body>
 </html>
