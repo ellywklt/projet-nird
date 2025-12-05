@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>JEU</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <title>Memory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_game.css') }}">
 </head>
-<body style="padding:40px">
+<body>
 
-<h1>MINI-JEU</h1>
-<p>Contenu pédagogique ici.</p>
+<h1 class="title">Jeu de Memory</h1>
+<div class="memory-container">
+    <div class="memory-game"></div>
+</div>
 
-<a href="/">⬅ Home</a>
 
+<script src="{{ url_for('static', filename='js/game.js') }}"></script>
 </body>
 </html>

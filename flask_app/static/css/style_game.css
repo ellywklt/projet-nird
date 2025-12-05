@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;   /* titre en haut, grille en dessous */
+    height: 100vh;
+    background: #f4f4f4;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+}
+
+.memory-container {
+    flex: 1;                       /* prend toute la hauteur restante */
+    display: flex;
+    justify-content: center;       /* centre horizontalement */
+    align-items: center;           /* centre verticalement */
+}
+
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    gap: 10px;
+}
+
+
+
+.memory-card {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d; /* permet la 3D */
+    transition: transform 0.5s;  /* anima retour */
+    cursor: pointer;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg); /* flip sans changer la position */
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* essentiel pour ne pas voir l'arrière */
+    border-radius: 10px;
+}
+
+.front {
+    transform: rotateY(180deg); /* face image à l'arrière au départ */
+}
+
+.back {
+    background: #2d89ef; /* couleur de la face cachée */
+}
+
