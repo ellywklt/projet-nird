@@ -1,7 +1,7 @@
 body {
     margin: 0;
     display: flex;
-    flex-direction: column;   /* titre en haut, grille en dessous */
+    flex-direction: column;
     height: 100vh;
     background: #f4f4f4;
 }
@@ -13,10 +13,10 @@ body {
 }
 
 .memory-container {
-    flex: 1;                       /* prend toute la hauteur restante */
+    flex: 1;
     display: flex;
-    justify-content: center;       /* centre horizontalement */
-    align-items: center;           /* centre verticalement */
+    justify-content: center;
+    align-items: center;
 }
 
 .memory-game {
@@ -25,34 +25,59 @@ body {
     gap: 10px;
 }
 
-
-
 .memory-card {
     width: 150px;
     height: 150px;
     position: relative;
-    transform-style: preserve-3d; /* permet la 3D */
-    transition: transform 0.5s;  /* anima retour */
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
     cursor: pointer;
 }
 
 .memory-card.flip {
-    transform: rotateY(180deg); /* flip sans changer la position */
+    transform: rotateY(180deg);
 }
 
 .front, .back {
     width: 100%;
     height: 100%;
     position: absolute;
-    backface-visibility: hidden; /* essentiel pour ne pas voir l'arrière */
+    backface-visibility: hidden;
     border-radius: 10px;
 }
 
 .front {
-    transform: rotateY(180deg); /* face image à l'arrière au départ */
+    transform: rotateY(180deg);
 }
 
 .back {
-    background: #2d89ef; /* couleur de la face cachée */
+    background: #2d89ef;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(3); /* x3 */
+    }
+}
+
+#final-image {
+    position: fixed;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#final-image img {
+    width: 300px; /* taille initiale */
+    border-radius: 10px;
+    box-shadow: 0 0 20px #444;
+    animation: zoomIn 2s forwards; /* applique l'animation */
 }
 

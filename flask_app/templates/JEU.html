@@ -2,16 +2,19 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Memory</title>
+    <title>Memory Game</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style_game.css') }}">
 </head>
 <body>
 
 <h1 class="title">Jeu de Memory</h1>
+
 <div class="memory-container">
     <div class="memory-game"></div>
 </div>
 
+<!-- Conteneur pour l'image finale -->
+<div id="final-image"></div>
 
 <script src="{{ url_for('static', filename='js/game.js') }}"></script>
 </body>

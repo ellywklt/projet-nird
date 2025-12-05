@@ -5,14 +5,16 @@ const images = [
     "/static/images/fond4.jpg"
 ];
 
+// Duplique les images pour créer des paires
 let cards = [...images, ...images];
 cards.sort(() => Math.random() - 0.5);
 
 const game = document.querySelector(".memory-game");
-
 let firstCard = null;
 let lock = false;
+let matchedPairs = 0;
 
+// Génère les cartes
 cards.forEach(src => {
     const card = document.createElement("div");
     card.classList.add("memory-card");
@@ -40,11 +42,18 @@ function flipCard(card) {
 
 function checkMatch(secondCard) {
     lock = true;
+
     const img1 = firstCard.querySelector(".front").src;
     const img2 = secondCard.querySelector(".front").src;
+
     if (img1 === img2) {
+        matchedPairs += 1;
         firstCard = null;
         lock = false;
+
+        if (matchedPairs === images.length) {
+            showFinalImage();
+        }
     } else {
         setTimeout(() => {
             firstCard.classList.remove("flip");
@@ -54,3 +63,15 @@ function checkMatch(secondCard) {
         }, 700);
     }
 }
+
+function showFinalImage() {
+    const game = document.querySelector(".memory-game");
+    game.innerHTML = ""; // supprime toutes les cartes
+
+    const finalImage = document.createElement("img");
+    finalImage.src = images[0]; // ou image de victoire
+    const container = document.getElementById("final-image");
+    container.innerHTML = ""; // vide le conteneur
+    container.appendChild(finalImage);
+}
+
