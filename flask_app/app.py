@@ -14,7 +14,6 @@ def MiniJeu():
 def linux():
     return render_template("LINUX.html")
 
-
 @app.route("/PARTI-PRIS")
 def PartiPri():
     return render_template("PartiPris.html")
@@ -24,4 +23,4 @@ def Frise():
     return render_template("frise.html")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
