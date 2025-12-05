@@ -132,6 +132,10 @@ body {
   transform: scale(1.15);
 }
 
+.card1:hover {
+  transform: scale(1.15);
+}
+
 .nav {
   position: fixed;
   top: 50%;
