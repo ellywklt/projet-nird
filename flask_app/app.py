@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/MINI-JEU")
+@app.route("/MEMORY")
 def MiniJeu():
     return render_template("JEU.html")
 
