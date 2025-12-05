@@ -73,7 +73,7 @@ function showFinalImage() {
 
     // Crée un lien vers une autre page
     const link = document.createElement("a");
-    link.href = "/nouvelle-page"; // mets ici l'URL de redirection
+    link.href = "/FRISE"; // mets ici l'URL de redirection
 
     // Crée l'image
     const finalImage = document.createElement("img");

@@ -18,5 +18,9 @@ def Linux():
 def PartiPri():
     return render_template("PartiPris.html")
 
+@app.route("/FRISE")
+def Frise():
+    return render_template("frise.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
