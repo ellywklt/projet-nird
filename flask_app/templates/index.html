@@ -3,7 +3,7 @@
 <head>
   <link rel="icon" href="{{ url_for('static', filename='../static/images/favicon.ico') }}">
   <meta charset="UTF-8">
-  <title>NIRD</title>
+  <title>PROJET NIRD</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
@@ -11,7 +11,10 @@
 <div class="slider-wrapper">
   <div class="slider" id="slider">
 
-    <div class="slide gradient1 active"></div>
+    <div class="slide gradient1 active">
+      <img src="{{ url_for('static', filename='images/logo+text512px.png') }}" alt="Logo NIRD" class="slide-logo">
+    </div>
+
     <div class="slide gradient2"></div>
     <div class="slide gradient3"></div>
 
@@ -26,29 +29,28 @@
 
 <div class="overlay"></div>
 
-<h1 class="title">NIRD</h1>
+<h1 class="title">PROJET NIRD</h1>
 
 <!-- ICÔNES EN IMAGES -->
 <div class="grid-container">
-  <div class="grid1">
-    <a href="/MEMORY" class="card1">
-      <img src="../static/images/sectionMiniGames.png" alt="MEMORY">
-      <span>MEMORY</span>
-    </a>
-  </div>
 
-  <div class="grid">
-    <a href="/LINUX" class="card">
-      <img src="../static/images/sectionLinux.png" alt="LINUX">
-      <span>LINUX</span>
-    </a>
+  <a href="/LINUX" class="card">
+    <img src="../static/images/sectionLinux.png">
+    <span>LINUX</span>
+  </a>
 
-    <a href="/PARTI-PRIS" class="card">
-      <img src="../static/images/sectionPartiPris.png" alt="Parti-pris">
-      <span>PARTI-PRIS</span>
-    </a>
-  </div>
+  <a href="/MEMORY" class="card card-main">
+    <img src="../static/images/sectionMiniGames.png">
+    <span>MEMORY</span>
+  </a>
+
+  <a href="/PARTI-PRIS" class="card">
+    <img src="../static/images/sectionPartiPris.png">
+    <span>PARTI-PRIS</span>
+  </a>
+
 </div>
+
 
 <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
