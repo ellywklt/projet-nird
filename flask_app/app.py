@@ -11,8 +11,9 @@ def MiniJeu():
     return render_template("JEU.html")
 
 @app.route("/LINUX")
-def Linux():
+def linux():
     return render_template("LINUX.html")
+
 
 @app.route("/PARTI-PRIS")
 def PartiPri():

@@ -6,10 +6,12 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;   
+  overflow-y: auto;     
   background: black;
   color: white;
 }
+
 
 /* === SLIDER DE FOND UNIQUEMENT === */
 /* === SLIDER DE FOND EN FONDU === */
