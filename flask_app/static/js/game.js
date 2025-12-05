@@ -1,8 +1,8 @@
 const images = [
-    "/static/images/fond1.jpg",
-    "/static/images/fond2.jpg",
-    "/static/images/fond3.jpg",
-    "/static/images/fond4.jpg"
+    "/static/images/carteAccess.png",
+    "/static/images/carteLinux.png",
+    "/static/images/carteRecond.png",
+    "/static/images/catePedago.png"
 ];
 
 // Duplique les images pour créer des paires
@@ -77,7 +77,7 @@ function showFinalImage() {
 
     // Crée l'image
     const finalImage = document.createElement("img");
-    finalImage.src = images[0]; // image de victoire
+    finalImage.src = "/static/images/trophy.jpg"; // image de victoire
 
     // Ajoute l'image dans le lien
     link.appendChild(finalImage);
