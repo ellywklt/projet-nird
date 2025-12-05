@@ -8,8 +8,12 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "flask_app/app.py"
+      "src": "^/static/(.*)",
+      "dest": "/flask_app/static/$1"
+    },
+    {
+      "src": "^/(.*)",
+      "dest": "/flask_app/app.py"
     }
   ]
 }
