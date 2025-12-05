@@ -68,10 +68,21 @@ function showFinalImage() {
     const game = document.querySelector(".memory-game");
     game.innerHTML = ""; // supprime toutes les cartes
 
-    const finalImage = document.createElement("img");
-    finalImage.src = images[0]; // ou image de victoire
     const container = document.getElementById("final-image");
     container.innerHTML = ""; // vide le conteneur
-    container.appendChild(finalImage);
+
+    // Crée un lien vers une autre page
+    const link = document.createElement("a");
+    link.href = "/nouvelle-page"; // mets ici l'URL de redirection
+
+    // Crée l'image
+    const finalImage = document.createElement("img");
+    finalImage.src = images[0]; // image de victoire
+
+    // Ajoute l'image dans le lien
+    link.appendChild(finalImage);
+
+    // Ajoute le lien dans le conteneur
+    container.appendChild(link);
 }
 

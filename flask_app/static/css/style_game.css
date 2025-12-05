@@ -66,7 +66,7 @@ body {
 #final-image {
     position: fixed;
     top: 50%;
-    left: 57%;
+    left: 58%;
     transform: translate(-50%, -50%) scale(1);
     display: flex;
     justify-content: center;
@@ -74,10 +74,10 @@ body {
     z-index: 1000;
 }
 
-#final-image img {
-    width: 300px; /* taille initiale */
+#final-image a img {
+    width: 300px;  /* taille initiale */
     border-radius: 10px;
     box-shadow: 0 0 20px #444;
-    animation: zoomIn 2s forwards; /* applique l'animation */
+    animation: zoomIn 2s forwards; /* applique le zoom */
+    cursor: pointer; /* indique que c'est cliquable */
 }
-
