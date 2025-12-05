@@ -176,7 +176,7 @@ body {
 }
 
 .gradient3 {
-  background: linear-gradient(120deg, #000814, #ffd60a, #000814);
+  background: linear-gradient(120deg, #000814, #ff6c0a, #000814);
   background-size: 300% 300%;
   animation: gradientMove3 14s ease-in-out infinite;
 }
