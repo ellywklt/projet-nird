@@ -78,8 +78,9 @@ body {
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 40px;
+  font-size: 50px;
   z-index: 10;
+  font-family: 'Zalando Sans Expanded', sans-serif;
 }
 
 /* === ICÔNES FIXES EN BAS === */
